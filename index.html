@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Універсальний калькулятор</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Універсальний калькулятор</h2>
+
+      <div class="angle-mode">
+        <label
+          ><input type="radio" name="angleMode" value="degrees" checked />
+          Градуси</label
+        >
+        <label
+          ><input type="radio" name="angleMode" value="radians" />
+          Радіани</label
+        >
+      </div>
+
+      <input type="text" id="display" readonly />
+
+      <button class="btn trig-toggle">Тригонометрія ▼</button>
+
+      <div class="trig-functions hidden">
+        <button class="btn trig" data-value="sin">sin</button>
+        <button class="btn trig" data-value="cos">cos</button>
+        <button class="btn trig" data-value="tan">tan</button>
+        <button class="btn trig" data-value="ctg">ctg</button>
+        <button class="btn trig" data-value="arcsin">arcsin</button>
+        <button class="btn trig" data-value="arccos">arccos</button>
+        <button class="btn trig" data-value="arctg">arctg</button>
+        <button class="btn trig" data-value="arcctg">arcctg</button>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" data-value="C">C</button>
+        <button class="btn" data-value="⌫">⌫</button>
+        <button class="btn" data-value="(">(</button>
+        <button class="btn" data-value=")">)</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="/">/</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="*">*</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="-">-</button>
+
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=",">,</button>
+        <button class="btn" data-value="%">%</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <button class="btn equals" data-value="=">=</button>
+      </div>
+    </div>
+
+    <script src="./js/model.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/controller.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

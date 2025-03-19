@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.calculator {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Перемикач градусів/радіанів */
+.angle-mode {
+  margin-bottom: 10px;
+}
+
+.angle-mode label {
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Тригонометрична кнопка */
+.trig-toggle {
+  width: 100%;
+  background: #6c757d;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.trig-toggle:hover {
+  background: #5a6268;
+}
+
+.trig-functions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.trig-functions.show {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.trig-functions .btn {
+  background: #28a745;
+  color: white;
+}
+
+.trig-functions.show {
+  display: grid;
+}
+
+/* Загальні стилі кнопок */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.btn {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #ddd;
+  transition: background 0.2s;
+}
+
+.btn.operator {
+  background: #f39c12;
+  color: white;
+}
+
+.btn.operator:hover {
+  background: #e6831b;
+}
+
+.btn.equals {
+  background: #3498db;
+  color: white;
+  grid-column: span 4;
+}
+
+.btn.equals:hover {
+  background: #2980b9;
+}
